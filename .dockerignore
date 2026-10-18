@@ -1,0 +1,5 @@
+.venv/
+__pycache__/
+.git/
+model_output/*.png
+*.csv

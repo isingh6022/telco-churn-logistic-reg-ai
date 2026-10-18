@@ -1,0 +1,8 @@
+# what the API (and so the docker image) needs to load the pickle and serve it.
+# scikit-learn must match the version the model was trained with, or the pickle may not load.
+pandas==3.0.6
+scikit-learn==1.9.1
+joblib
+fastapi==0.144.0
+pydantic==2.14.1
+uvicorn[standard]

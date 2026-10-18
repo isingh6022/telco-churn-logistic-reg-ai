@@ -1,0 +1,5 @@
+# versions this project was built and tested with (Python 3.14)
+-r requirements-api.txt
+
+# only for training (plots in train.py / evaluate.py)
+matplotlib
