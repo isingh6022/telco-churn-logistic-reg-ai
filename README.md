@@ -55,3 +55,36 @@ curl -X POST http://localhost:8000/predict -H 'Content-Type: application/json' -
 Data can be downloaded from kaggle from this link: [Telco Customer Churn](https://www.kaggle.com/datasets/blastchar/telco-customer-churn/code).
 
 After downloading, update file name in the code base.
+
+## Sample output
+
+Class distribution:-
+count percent
+Churn  
+No 5174 73.46
+Yes 1869 26.54
+
+# Logistic Regression
+
+Size of training sample = 5634
+Size of testing sample = 1409
+
+ROC AUC = 0.842
+
+Classification Report:-
+precision recall f1-score support
+
+    No churn       0.90      0.72      0.80      1035
+       Churn       0.50      0.78      0.61       374
+
+    accuracy                           0.74      1409
+
+macro avg 0.70 0.75 0.71 1409
+weighted avg 0.80 0.74 0.75 1409
+
+Confusion Matrix:-
+
+[[747 288]
+ [ 81 293]]
+
+---
