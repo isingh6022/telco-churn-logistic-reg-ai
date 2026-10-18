@@ -17,15 +17,7 @@ The csv stays in the project root. `model_output/` is created by training and ho
 
 ## Run
 
-```bash
-uv venv .venv && uv pip install --python .venv/bin/python -r requirements.txt   # or: python -m venv .venv && .venv/bin/pip install -r requirements.txt
-source .venv/bin/activate
-
-python -m model.train                        # train, evaluate, save the model (run from the project root)
-uvicorn api:app --host 0.0.0.0 --port 8000   # serve it; docs at http://localhost:8000/docs
-```
-
-Or with make + docker:
+With make + docker: -
 
 ```bash
 make install # create the venv and install the dependencies
@@ -33,6 +25,8 @@ make train   # train, save the model and figures
 make build   # retrain, then build the docker image telco-churn:latest
 make run     # serve the image on http://localhost:8080
 ```
+
+To run without make, just run the commands from the file `Makefile`.
 
 The image only serves the model: it has `api.py`, `model/all_names.py`, `model/models.py`, `model_output/churn_model.pkl` and the packages in `requirements-api.txt`, but not the csv or the plotting libraries.
 
