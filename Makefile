@@ -24,7 +24,7 @@ build: train
 	docker build -t telco-churn:latest .
 
 run:
-	docker run --rm -p 8080:8000 telco-churn:latest
+	docker run --rm -p 8080:8080 telco-churn:latest
 
 clean:
 	rm -rf model_output __pycache__ model/__pycache__

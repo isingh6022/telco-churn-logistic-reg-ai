@@ -33,7 +33,7 @@ The image only serves the model: it has `api.py`, `model/all_names.py`, `model/m
 ## Example request
 
 ```bash
-curl -X POST http://localhost:8000/predict -H 'Content-Type: application/json' -d '{
+curl -X POST http://localhost:8080/predict -H 'Content-Type: application/json' -d '{
   "gender": "Female", "SeniorCitizen": 0, "Partner": "No", "Dependents": "No", "tenure": 2,
   "PhoneService": "Yes", "MultipleLines": "No", "InternetService": "Fiber optic",
   "OnlineSecurity": "No", "OnlineBackup": "No", "DeviceProtection": "No", "TechSupport": "No",
